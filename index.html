@@ -138,6 +138,13 @@
 
     
       
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Tags</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Termux-C-AI-Chat-LingChat-RAG-Mobile-Development/" rel="tag">Termux, C++, AI, Chat, LingChat, RAG, Mobile Development</a></li></ul>
+    </div>
+  </div>
+
 
     
       
@@ -148,7 +155,7 @@
       
         <a class="archive-link" href="/archives/2025/08 ">
           August 2025 
-          <div class="archive-count">3 </div>
+          <div class="archive-count">1 </div>
         </a>
       
     </div>
@@ -162,21 +169,9 @@
       <h3 class="widget-title">Recent Posts</h3>
       <ul>
         
-          <a class="recent-link" href="/2025/08/06/test/" title="test" >
+          <a class="recent-link" href="/2025/08/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="在 Termux 上编译运行 LingChat-C++：一个带 RAG 的移动端聊天应用" >
             <div class="recent-link-text">
-              test
-            </div>
-          </a>
-        
-          <a class="recent-link" href="/2025/08/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="我的第一篇博客" >
-            <div class="recent-link-text">
-              我的第一篇博客
-            </div>
-          </a>
-        
-          <a class="recent-link" href="/2025/08/06/hello-world/" title="Hello World" >
-            <div class="recent-link-text">
-              Hello World
+              在 Termux 上编译运行 LingChat-C++：一个带 RAG 的移动端聊天应用
             </div>
           </a>
         
@@ -193,77 +188,6 @@
    
 
 
-<article id="post-test" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/06/test/">test</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-06T13:14:21.000Z" itemprop="datePublished">2025-08-06</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-    Uncategorized 
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            8 words 
-          </div>
-        </div>
-        
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              这是一篇测试文章
-
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/06/test/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-   
-
-
 <article id="post-我的第一篇博客" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
@@ -275,7 +199,7 @@
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
+        <a class="p-name article-title" href="/2025/08/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">在 Termux 上编译运行 LingChat-C++：一个带 RAG 的移动端聊天应用</a>
       </h1>
     
   
@@ -294,24 +218,28 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            9.1k words 
+            1.7k words 
           </div>
         </div>
         
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Termux-C-AI-Chat-LingChat-RAG-Mobile-Development/" rel="tag">Termux, C++, AI, Chat, LingChat, RAG, Mobile Development</a></li></ul>
+
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
           <div class="truncate-text">
             
-              LingChat-C++-Termux   本应用现仅在termux环境中编译和运行过，其他linux环境请自行修改makefile中的库名，以及依赖库、库的路径等   本项目是LingChat的二创，有兴趣的可以前往LingChat的仓库(https://github.com/SlimeBoyOwO/LingChat)  
-一、编译和运行1.工具链安装   首先我们需要安装编译的工具链以及依赖库
-1pkg install curl libcurl clang make openssl nlohmann-json git
-2.克隆仓库以获取文件1git clone https://github.com/yun-helpr/LingChat-C--Termux.git
-这里我们可以重命名一下文件夹
-1mv LingChat-C--Termux chat
-3.编译   由于一些原因，我这里并不能提供发行版，所以请自行编译   至于如何编译，仓库里有makefile,所以只需
-12cd chatmake
-   我在makefile里加了依赖库验证，所以没有装的会提醒   那么终端则会输...
+              项目简介LingChat-C++-Termux 是开源项目 LingChat 的一个 C++ 移植版本，专为 Termux 环境打造。它集成了 RAG (检索增强生成) 系统，为 AI 对话提供长期记忆能力，并可以高度自定义。目前主要在 Termux 中测试运行，其他 Linux 环境需自行调整编译配置。
+编译与运行指南1. 安装依赖1pkg install curl libcurl clang make openssl nlohmann-json git
+
+2. 获取源码12git clone https://github.com/yun-helpr/LingChat-C--Termux.gitmv LingChat-C--Termux chat &amp;&amp; cd chat
+
+3. 编译项目1make
+
+Makefile 包含依赖检查，缺失库会提示
+成功编译后输出类似：12~/chat $ makearm-linux-androideabi-clang++ -std=c++17 ... -o build/bin/backend_server
+
+4. 配置环境 (.en...
             
           </div>
         
@@ -324,89 +252,6 @@
     <a class="right-panel  non-pic  "
       
       href="/2025/08/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-   
-
-
-<article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/06/hello-world/">Hello World</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-06T12:13:31.311Z" itemprop="datePublished">2025-08-06</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-    Uncategorized 
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            367 words 
-          </div>
-        </div>
-        
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
-
-More info: Writing
-Run server1$ hexo server
-
-More info: Server
-Generate static files1$ hexo generate
-
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-
-More info: Deployment
-
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/06/hello-world/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
