@@ -170,9 +170,9 @@
       <h3 class="widget-title">Recent Posts</h3>
       <ul>
         
-          <a class="recent-link" href="/2025/08/06/termux%E9%85%8D%E7%BD%AEc-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%8D%97/" title="termux配置c++开发环境指南" >
+          <a class="recent-link" href="/2025/08/06/termux%E9%85%8D%E7%BD%AEc-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%8D%97/" title="Termux配置C++开发环境完整指南" >
             <div class="recent-link-text">
-              termux配置c++开发环境指南
+              Termux配置C++开发环境完整指南
             </div>
           </a>
         
@@ -206,7 +206,7 @@
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/06/termux%E9%85%8D%E7%BD%AEc-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%8D%97/">termux配置c++开发环境指南</a>
+        <a class="p-name article-title" href="/2025/08/06/termux%E9%85%8D%E7%BD%AEc-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%8D%97/">Termux配置C++开发环境完整指南</a>
       </h1>
     
   
@@ -225,7 +225,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            2.5k words 
+            3.3k words 
           </div>
         </div>
         
@@ -236,21 +236,17 @@
         
           <div class="truncate-text">
             
-              在Android上搭建C++开发环境：Termux全指南想在Android手机上编写和调试C++代码？Termux是你的最佳选择！本教程将带你一步步配置完整的C++开发环境，从编译器安装到IDE配置再到项目构建，让你的手机变身移动开发工作站。
+              在Android上搭建C++开发环境：Termux全指南想在Android设备上编写和调试C++代码？Termux是完美解决方案！本教程将带你一步步配置完整的C++开发环境，从编译器安装到IDE配置再到项目构建，让你的手机变身移动开发工作站。
 
-🚀 环境准备推荐使用ZeroTermux：基于Termux的优化版本，更适合中国宝宝体质。
+🚀 环境准备推荐使用Termux官方版本：
 
-GitHub下载地址：https://github.com/hanxinhao000/ZeroTermux
+Google Play下载：https://play.google.com/store/apps/details?id=com.termux
+F-Droid下载：https://f-droid.org/packages/com.termux/
+
 安装后执行基础更新：
+12pkg update &amp;&amp; pkg upgrade -ypkg install -y curl wget
 
-1pkg update &amp;&amp; pkg upgrade
-
-🔧 配置国内源（加速安装）按动音量+键呼出侧边栏，点击换源，选择清华源或北京源(我这里选择北京源)，等待脚步跑完，如遇到停顿，输入y回车即可更新源缓存：
-1apt update
-
-
-⚙️ 安装开发工具链使用apt代替pkg（更符合Linux习惯）：
-1234567891011apt install -y \    clang \              # LLVM编译器    make \               # 构建工具    ...
+🔧 配置国内源（加速安装）12sed -i &#x27;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.bfsu.edu.cn/termux/termux-packages-24 stable main@&#x27; $PREFIX/etc/apt/...
             
           </div>
         

@@ -14,21 +14,21 @@
   
 
   
-  <title>termux配置c++开发环境指南 | Yun-love</title>
+  <title>Termux配置C++开发环境完整指南 | Yun-love</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="在Android上搭建C++开发环境：Termux全指南想在Android手机上编写和调试C++代码？Termux是你的最佳选择！本教程将带你一步步配置完整的C++开发环境，从编译器安装到IDE配置再到项目构建，让你的手机变身移动开发工作站。  🚀 环境准备推荐使用ZeroTermux：基于Termux的优化版本，更适合中国宝宝体质。  GitHub下载地址：https:&#x2F;&#x2F;github.com">
+  <meta name="description" content="在Android上搭建C++开发环境：Termux全指南想在Android设备上编写和调试C++代码？Termux是完美解决方案！本教程将带你一步步配置完整的C++开发环境，从编译器安装到IDE配置再到项目构建，让你的手机变身移动开发工作站。  🚀 环境准备推荐使用Termux官方版本：  Google Play下载：https:&#x2F;&#x2F;play.google.com&#x2F;store&#x2F;apps&#x2F;deta">
 <meta property="og:type" content="article">
-<meta property="og:title" content="termux配置c++开发环境指南">
+<meta property="og:title" content="Termux配置C++开发环境完整指南">
 <meta property="og:url" content="http://example.com/2025/08/06/termux%E9%85%8D%E7%BD%AEc-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="Yun-love">
-<meta property="og:description" content="在Android上搭建C++开发环境：Termux全指南想在Android手机上编写和调试C++代码？Termux是你的最佳选择！本教程将带你一步步配置完整的C++开发环境，从编译器安装到IDE配置再到项目构建，让你的手机变身移动开发工作站。  🚀 环境准备推荐使用ZeroTermux：基于Termux的优化版本，更适合中国宝宝体质。  GitHub下载地址：https:&#x2F;&#x2F;github.com">
+<meta property="og:description" content="在Android上搭建C++开发环境：Termux全指南想在Android设备上编写和调试C++代码？Termux是完美解决方案！本教程将带你一步步配置完整的C++开发环境，从编译器安装到IDE配置再到项目构建，让你的手机变身移动开发工作站。  🚀 环境准备推荐使用Termux官方版本：  Google Play下载：https:&#x2F;&#x2F;play.google.com&#x2F;store&#x2F;apps&#x2F;deta">
 <meta property="og:locale">
 <meta property="article:published_time" content="2025-08-06T15:56:38.000Z">
-<meta property="article:modified_time" content="2025-08-06T16:13:39.360Z">
+<meta property="article:modified_time" content="2025-08-07T02:56:23.731Z">
 <meta property="article:author" content="yun-love">
 <meta property="article:tag" content="c++">
 <meta property="article:tag" content="termux">
@@ -174,9 +174,9 @@
       <h3 class="widget-title">Recent Posts</h3>
       <ul>
         
-          <a class="recent-link" href="/2025/08/06/termux%E9%85%8D%E7%BD%AEc-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%8D%97/" title="termux配置c++开发环境指南" >
+          <a class="recent-link" href="/2025/08/06/termux%E9%85%8D%E7%BD%AEc-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%8D%97/" title="Termux配置C++开发环境完整指南" >
             <div class="recent-link-text">
-              termux配置c++开发环境指南
+              Termux配置C++开发环境完整指南
             </div>
           </a>
         
@@ -211,7 +211,7 @@
   
     
       <h1 class="p-name article-title" itemprop="headline name">
-        termux配置c++开发环境指南
+        Termux配置C++开发环境完整指南
       </h1>
     
   
@@ -230,7 +230,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            2.5k words 
+            3.3k words 
           </div>
         </div>
         
@@ -239,29 +239,31 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <h1 id="在Android上搭建C-开发环境：Termux全指南"><a href="#在Android上搭建C-开发环境：Termux全指南" class="headerlink" title="在Android上搭建C++开发环境：Termux全指南"></a>在Android上搭建C++开发环境：Termux全指南</h1><p>想在Android手机上编写和调试C++代码？Termux是你的最佳选择！本教程将带你一步步配置完整的C++开发环境，从编译器安装到IDE配置再到项目构建，让你的手机变身移动开发工作站。</p>
+          <h1 id="在Android上搭建C-开发环境：Termux全指南"><a href="#在Android上搭建C-开发环境：Termux全指南" class="headerlink" title="在Android上搭建C++开发环境：Termux全指南"></a>在Android上搭建C++开发环境：Termux全指南</h1><p>想在Android设备上编写和调试C++代码？Termux是完美解决方案！本教程将带你一步步配置完整的C++开发环境，从编译器安装到IDE配置再到项目构建，让你的手机变身移动开发工作站。</p>
 <hr>
-<h3 id="🚀-环境准备"><a href="#🚀-环境准备" class="headerlink" title="🚀 环境准备"></a>🚀 环境准备</h3><p><strong>推荐使用ZeroTermux</strong>：基于Termux的优化版本，更适合中国宝宝体质。</p>
+<h3 id="🚀-环境准备"><a href="#🚀-环境准备" class="headerlink" title="🚀 环境准备"></a>🚀 环境准备</h3><p><strong>推荐使用Termux官方版本</strong>：</p>
 <ul>
-<li>GitHub下载地址：<a target="_blank" rel="noopener" href="https://github.com/hanxinhao000/ZeroTermux">https://github.com/hanxinhao000/ZeroTermux</a></li>
-<li>安装后执行基础更新：</li>
+<li>Google Play下载：<a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.termux">https://play.google.com/store/apps/details?id=com.termux</a></li>
+<li>F-Droid下载：<a target="_blank" rel="noopener" href="https://f-droid.org/packages/com.termux/">https://f-droid.org/packages/com.termux/</a></li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg update &amp;&amp; pkg upgrade</span><br></pre></td></tr></table></figure>
+<p>安装后执行基础更新：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pkg update &amp;&amp; pkg upgrade -y</span><br><span class="line">pkg install -y curl wget</span><br></pre></td></tr></table></figure>
 
-<h4 id="🔧-配置国内源（加速安装）"><a href="#🔧-配置国内源（加速安装）" class="headerlink" title="🔧 配置国内源（加速安装）"></a>🔧 配置国内源（加速安装）</h4><p>按动音量+键呼出侧边栏，点击换源，选择清华源或北京源(我这里选择北京源)，等待脚步跑完，如遇到停顿，输入y回车即可<br>更新源缓存：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="⚙️-安装开发工具链"><a href="#⚙️-安装开发工具链" class="headerlink" title="⚙️ 安装开发工具链"></a>⚙️ 安装开发工具链</h2><p><strong>使用apt代替pkg</strong>（更符合Linux习惯）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">apt install -y \</span><br><span class="line">    clang \              <span class="comment"># LLVM编译器</span></span><br><span class="line">    make \               <span class="comment"># 构建工具</span></span><br><span class="line">    cmake \              <span class="comment"># 跨平台构建系统</span></span><br><span class="line">    git \                <span class="comment"># 版本控制</span></span><br><span class="line">    gdb \                <span class="comment"># GNU调试器</span></span><br><span class="line">    lldb \               <span class="comment"># LLVM调试器</span></span><br><span class="line">    lld \                <span class="comment"># LLVM链接器</span></span><br><span class="line">    binutils \           <span class="comment"># 二进制工具集</span></span><br><span class="line">    ninja \              <span class="comment"># 高效构建工具</span></span><br><span class="line">    build-essential      <span class="comment"># 基础编译套件</span></span><br></pre></td></tr></table></figure>
+<h4 id="🔧-配置国内源（加速安装）"><a href="#🔧-配置国内源（加速安装）" class="headerlink" title="🔧 配置国内源（加速安装）"></a>🔧 配置国内源（加速安装）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">&#x27;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.bfsu.edu.cn/termux/termux-packages-24 stable main@&#x27;</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br><span class="line">apt update &amp;&amp; apt upgrade -y</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="✨-安装LVim编辑器"><a href="#✨-安装LVim编辑器" class="headerlink" title="✨ 安装LVim编辑器"></a>✨ 安装LVim编辑器</h2><p>LVim是Neovim的现代化配置，开箱即用：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)</span><br></pre></td></tr></table></figure>
-<p>安装后添加环境变量：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;export PATH=\$HOME/.local/bin:\$PATH&quot;</span> &gt;&gt; ~/.bashrc</span><br><span class="line"><span class="built_in">source</span> ~/.bashrc <span class="comment">#根据自己的shell选择，默认bash，如果是zsh的话应该是~/.zshrc</span></span><br></pre></td></tr></table></figure>
-<p>启动编辑器：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lvim</span><br></pre></td></tr></table></figure>
+<h2 id="⚙️-安装开发工具链"><a href="#⚙️-安装开发工具链" class="headerlink" title="⚙️ 安装开发工具链"></a>⚙️ 安装开发工具链</h2><p>安装必要编译工具：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">pkg install -y \</span><br><span class="line">    clang \              <span class="comment"># LLVM编译器</span></span><br><span class="line">    cmake \              <span class="comment"># 跨平台构建系统</span></span><br><span class="line">    git \                <span class="comment"># 版本控制</span></span><br><span class="line">    gdb \                <span class="comment"># GNU调试器</span></span><br><span class="line">    make \               <span class="comment"># 构建工具</span></span><br><span class="line">    ninja \              <span class="comment"># 高效构建工具</span></span><br><span class="line">    vim-python \         <span class="comment"># 编辑器</span></span><br><span class="line">    ccache \             <span class="comment"># 编译缓存加速</span></span><br><span class="line">    bear \               <span class="comment"># 生成编译数据库</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="✨-安装Neovim编辑器"><a href="#✨-安装Neovim编辑器" class="headerlink" title="✨ 安装Neovim编辑器"></a>✨ 安装Neovim编辑器</h2><p>更现代化的Vim替代品：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg install -y neovim</span><br></pre></td></tr></table></figure>
+
+<p>创建基础配置 <code>~/.config/nvim/init.vim</code>：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&quot; 基础配置</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">number</span></span><br><span class="line"><span class="keyword">syntax</span> enable</span><br><span class="line"><span class="keyword">set</span> tabstop=<span class="number">4</span></span><br><span class="line"><span class="keyword">set</span> <span class="built_in">shiftwidth</span>=<span class="number">4</span></span><br><span class="line"><span class="keyword">set</span> expandtab</span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; 插件管理 (使用vim-plug)</span></span><br><span class="line"><span class="keyword">call</span> plug#begin(<span class="string">&#x27;~/.vim/plugged&#x27;</span>)</span><br><span class="line">Plug <span class="string">&#x27;neoclide/coc.nvim&#x27;</span>, &#123;<span class="string">&#x27;branch&#x27;</span>: <span class="string">&#x27;release&#x27;</span>&#125; <span class="comment">&quot; 智能补全</span></span><br><span class="line">Plug <span class="string">&#x27;preservim/nerdtree&#x27;</span> <span class="comment">&quot; 文件浏览器</span></span><br><span class="line">Plug <span class="string">&#x27;junegunn/fzf&#x27;</span>, &#123; <span class="string">&#x27;do&#x27;</span>: &#123; -&gt; fzf#install() &#125; &#125; <span class="comment">&quot; 模糊搜索</span></span><br><span class="line"><span class="keyword">call</span> plug#end()</span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; 快捷键映射</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-n&gt;</span> :NERDTreeToggle<span class="symbol">&lt;CR&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-p&gt;</span> :FZF<span class="symbol">&lt;CR&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>安装插件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvim +PlugInstall +qall</span><br></pre></td></tr></table></figure>
 
 <hr>
 <h2 id="🛠️-创建CMake项目"><a href="#🛠️-创建CMake项目" class="headerlink" title="🛠️ 创建CMake项目"></a>🛠️ 创建CMake项目</h2><ol>
@@ -272,40 +274,87 @@
 <ol start="2">
 <li>编写示例代码：</li>
 </ol>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/main.cpp</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello C++!&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/main.cpp</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;hello.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">say_hello</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// include/hello.h</span></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">say_hello</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// src/hello.cpp</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;hello.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">say_hello</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Hello from C++!&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
-<li>创建makefile：</li>
+<li>创建CMakeLists.txt：</li>
 </ol>
-<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># myapp/Makefile</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 编译器配置</span></span><br><span class="line">CXX      := clang++</span><br><span class="line">CXXFLAGS := -Wall -Wextra -Iinclude -std=c++17</span><br><span class="line">LDFLAGS  := </span><br><span class="line">LDLIBS   := </span><br><span class="line"></span><br><span class="line"><span class="comment"># 调试配置</span></span><br><span class="line">DEBUG_FLAGS := -g -O0 -DDEBUG</span><br><span class="line">RELEASE_FLAGS := -O3 -DNDEBUG</span><br><span class="line"></span><br><span class="line"><span class="comment"># 目录设置</span></span><br><span class="line">SRC_DIR := src</span><br><span class="line">OBJ_DIR := obj</span><br><span class="line">BIN_DIR := bin</span><br><span class="line">INCLUDE_DIR := <span class="keyword">include</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 自动获取源文件</span></span><br><span class="line">SOURCES := <span class="variable">$(<span class="built_in">wildcard</span> <span class="variable">$(SRC_DIR)</span>/*.cpp)</span></span><br><span class="line">OBJECTS := <span class="variable">$(<span class="built_in">patsubst</span> <span class="variable">$(SRC_DIR)</span>/%.cpp,<span class="variable">$(OBJ_DIR)</span>/%.o,<span class="variable">$(SOURCES)</span>)</span></span><br><span class="line">TARGET  := <span class="variable">$(BIN_DIR)</span>/myapp</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建目标</span></span><br><span class="line"><span class="section">all: release</span></span><br><span class="line"></span><br><span class="line"><span class="section">debug: CXXFLAGS += <span class="variable">$(DEBUG_FLAGS)</span></span></span><br><span class="line"><span class="section">debug: <span class="variable">$(TARGET)</span></span></span><br><span class="line"></span><br><span class="line"><span class="section">release: CXXFLAGS += <span class="variable">$(RELEASE_FLAGS)</span></span></span><br><span class="line"><span class="section">release: <span class="variable">$(TARGET)</span></span></span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJECTS)</span></span><br><span class="line">	@mkdir -p $(@D)</span><br><span class="line">	<span class="variable">$(CXX)</span> <span class="variable">$(LDFLAGS)</span> <span class="variable">$^</span> <span class="variable">$(LDLIBS)</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$(OBJ_DIR)</span>/%.o: <span class="variable">$(SRC_DIR)</span>/%.cpp</span><br><span class="line">	@mkdir -p $(@D)</span><br><span class="line">	<span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> -c <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成编译数据库（供LVim使用）</span></span><br><span class="line"><span class="section">compile_commands:</span></span><br><span class="line">	bear -- make debug</span><br><span class="line"></span><br><span class="line"><span class="comment"># 清理构建</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	rm -rf <span class="variable">$(OBJ_DIR)</span> <span class="variable">$(BIN_DIR)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line"><span class="section">install_deps:</span></span><br><span class="line">	sudo apt install -y libsql</span><br></pre></td></tr></table></figure>
-<p>运行程序：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./main</span><br><span class="line"><span class="comment"># 输出：Hello C++!</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"><span class="keyword">project</span>(MyApp)</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD <span class="number">17</span>)</span><br><span class="line"><span class="keyword">set</span>(CMAKE_EXPORT_COMPILE_COMMANDS <span class="keyword">ON</span>) <span class="comment"># 为编辑器生成补全信息</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">include_directories</span>(<span class="keyword">include</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">file</span>(GLOB SOURCES <span class="string">&quot;src/*.cpp&quot;</span>)</span><br><span class="line"><span class="keyword">add_executable</span>(myapp <span class="variable">$&#123;SOURCES&#125;</span>)</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>构建项目：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> build</span><br><span class="line">cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Debug</span><br><span class="line">cmake --build .</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>运行程序：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./myapp</span><br><span class="line"><span class="comment"># 输出：Hello from C++!</span></span><br></pre></td></tr></table></figure>
 
 <hr>
-<h1 id="🐞-调试配置（GDB示例）"><a href="#🐞-调试配置（GDB示例）" class="headerlink" title="🐞 调试配置（GDB示例）"></a>🐞 调试配置（GDB示例）</h1><h2 id="编译带调试符号的程序"><a href="#编译带调试符号的程序" class="headerlink" title="编译带调试符号的程序"></a>编译带调试符号的程序</h2><p>make debug</p>
-<h2 id="启动GDB"><a href="#启动GDB" class="headerlink" title="启动GDB"></a>启动GDB</h2><p>gdb .&#x2F;bin&#x2F;myapp</p>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>(gdb) break main          # 在main函数设置断点<br>(gdb) run                 # 启动程序<br>(gdb) next                # 单步执行<br>(gdb) print variable      # 查看变量<br>(gdb) backtrace           # 查看调用栈<br>(gdb) watch expression    # 设置观察点</p>
-<h1 id="🌟-性能优化建议"><a href="#🌟-性能优化建议" class="headerlink" title="🌟 性能优化建议"></a>🌟 性能优化建议</h1><ol>
-<li>使用SSH远程开发：</li>
+<h2 id="🐞-调试配置（GDB示例）"><a href="#🐞-调试配置（GDB示例）" class="headerlink" title="🐞 调试配置（GDB示例）"></a>🐞 调试配置（GDB示例）</h2><ol>
+<li>编译带调试符号的程序：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pkg install openssh</span><br><span class="line">passwd  <span class="comment"># 设置密码</span></span><br><span class="line">sshd    <span class="comment"># 启动服务</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_BUILD_TYPE=Debug ..</span><br><span class="line">cmake --build .</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
-<li>启用编译缓存：</li>
+<li>启动GDB调试：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;export CCACHE_DIR=/data/data/com.termux/files/usr/ccache&quot;</span> &gt;&gt; ~/.bashrc</span><br><span class="line">ccache --max-size=5G</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gdb ./myapp</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
-<li>Swap扩展（4GB以下内存建议）：</li>
+<li>常用调试命令：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pkg install termux-tools</span><br><span class="line">termux-setup-storage</span><br><span class="line"><span class="built_in">dd</span> <span class="keyword">if</span>=/dev/zero of=~/swapfile bs=1M count=1024</span><br><span class="line">mkswap swapfile</span><br><span class="line">swapon swapfile</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(gdb) break main          # 在main函数设置断点</span><br><span class="line">(gdb) run                # 启动程序</span><br><span class="line">(gdb) next               # 单步执行</span><br><span class="line">(gdb) print variable     # 查看变量值</span><br><span class="line">(gdb) backtrace          # 查看调用栈</span><br><span class="line">(gdb) watch expression   # 设置观察点</span><br><span class="line">(gdb) continue           # 继续执行</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>调试会话示例：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(gdb) break say_hello    # 在say_hello函数设置断点</span><br><span class="line">(gdb) run                # 运行程序</span><br><span class="line">Breakpoint 1, say_hello () at src/hello.cpp:5</span><br><span class="line">(gdb) next               # 执行下一行</span><br><span class="line">(gdb) print std::cout    # 查看cout对象</span><br><span class="line">(gdb) continue           # 继续执行到结束</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="🌟-性能优化建议"><a href="#🌟-性能优化建议" class="headerlink" title="🌟 性能优化建议"></a>🌟 性能优化建议</h2><ol>
+<li><strong>使用SSH远程开发</strong>：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pkg install openssh</span><br><span class="line">passwd  <span class="comment"># 设置密码</span></span><br><span class="line">sshd -p 8022 &amp;  <span class="comment"># 在8022端口启动服务</span></span><br></pre></td></tr></table></figure>
+<p>在电脑端连接：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh your_username@手机IP -p 8022</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>启用编译缓存</strong>：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;export CCACHE_DIR=<span class="variable">$HOME</span>/.ccache&quot;</span> &gt;&gt; ~/.bashrc</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;export CCACHE_SIZE=2G&quot;</span> &gt;&gt; ~/.bashrc</span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line">ccache --set-config=max_size=2G</span><br></pre></td></tr></table></figure>
+<p>查看缓存统计：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ccache -s</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>Swap扩展（4GB以下内存建议）</strong>：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建1GB swap文件</span></span><br><span class="line"><span class="built_in">dd</span> <span class="keyword">if</span>=/dev/zero of=~/swapfile bs=1M count=1024</span><br><span class="line">mkswap ~/swapfile</span><br><span class="line">swapon ~/swapfile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开机自动启用</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;swapon ~/swapfile&quot;</span> &gt;&gt; ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><strong>使用tmux管理会话</strong>：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pkg install tmux</span><br><span class="line">tmux new -s dev_session  <span class="comment"># 创建新会话</span></span><br></pre></td></tr></table></figure>
+<p>常用tmux命令：</p>
+<ul>
+<li><code>Ctrl+b d</code>：分离会话</li>
+<li><code>tmux attach -t dev_session</code>：重新连接会话</li>
+<li><code>Ctrl+b c</code>：创建新窗口</li>
+<li><code>Ctrl+b n</code>：切换下一个窗口</li>
+</ul>
+<ol start="5">
+<li><strong>内存优化</strong>：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 限制后台进程</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;ulimit -Sv 2000000&quot;</span> &gt;&gt; ~/.bashrc  <span class="comment"># 限制进程内存为2GB</span></span><br></pre></td></tr></table></figure>
 
 <hr>
 <p>通过这篇指南，你已经将Android设备变成了功能完整的C++开发环境。无论是在通勤路上还是外出旅行，随时可以开启编码之旅。Termux的强大远超想象，下一步可以尝试：</p>
 <ul>
-<li>使用CLion远程开发</li>
+<li>使用VS Code Remote SSH远程开发</li>
 <li>配置GitHub Actions自动化构建</li>
 <li>开发Android NDK应用</li>
+<li>集成Google Test单元测试框架</li>
 </ul>
 <p><strong>移动开发的未来，就在你的掌中</strong>。开始你的第一个移动端C++项目吧！</p>
 
