@@ -219,7 +219,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            1.8k words 
+            7.5k words 
           </div>
         </div>
         
@@ -230,15 +230,21 @@
         
           <div class="truncate-text">
             
-              项目简介LingChat-C++-TermuxLingChat-C++-Termux是开源项目 LingChat 的一个 C++ 移植版本，专为 Termux 环境打造。它集成了 RAG (检索增强生成) 系统，为 AI 对话提供长期记忆能力，并可以高度自定义。目前主要在 Termux 中测试运行，其他 Linux 环境需自行调整编译配置。
-编译与运行指南1. 安装依赖1pkg install curl libcurl clang make openssl nlohmann-json git #这里可以自行选择包管理器，如apt，apt-get等
+              在Termux中运行LingChat-C++：打造移动端AI聊天伴侣本文将详细介绍如何在Termux环境中编译和运行LingChat-C++项目，这是一个基于C++开发的AI聊天应用，特别适配了Android终端环境。项目融合了WebSocket通信、RAG记忆系统和情感化交互界面，打造出独特的聊天体验。
 
-2. 获取源码12git clone https://github.com/yun-helpr/LingChat-C--Termux.gitmv LingChat-C--Termux chat &amp;&amp; cd chat
+项目背景LingChat-C++是LingChat的二创项目，专为Termux环境优化。它通过以下核心特性提升交互体验：
 
-3. 编译项目1make
+✅ RAG记忆系统：实现AI的长期记忆功能(**现已废弃)
+🎭 情感化交互：立绘表情与音效随对话情绪变化
+🌙 昼夜模式：自动切换的日&#x2F;夜主题界面
+🔌 WebSocket通信：高效的前后端实时交互
 
-Makefile 包含依赖检查，缺失库会提示
-成功编译后输出类似：12~/chat $ makearm-linux-androideabi-clang++ -std=c++17...
+
+环境准备与编译1. 安装工具链与依赖库
+1pkg install curl libcurl clang make openssl nlohmann-json git #自行选择包管理器，如apt，apt-get等
+
+2. 克隆并准备仓库
+12git clone https://github.com/yun-helpr/LingChat-C--...
             
           </div>
         
