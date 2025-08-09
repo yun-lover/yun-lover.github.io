@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 
-
-<html theme="dark" showBanner="true" hasBanner="false" > 
+<html theme="dark" showBanner="true" hasBanner="false"> 
 <link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
 <link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
 <link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
-<script src="/js/color.global.min.js" ></script>
-<script src="/js/load-settings.js" ></script>
+<script src="/js/color.global.min.js"></script>
+<script src="/js/load-settings.js"></script>
 <head>
   <meta charset="utf-8">
   
@@ -42,7 +41,76 @@
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 
-<body>
+
+<!-- 背景 + 毛玻璃覆盖层（支持白昼/夜间） -->
+<style>
+  /* 保证页面占满高度，背景能显示 */
+  html, body { height: 100%; margin: 0; }
+
+  /* 背景图放在 html（也可以放 body），便于 overlay 模糊 */
+  html {
+    
+    background-image: url('https://img.loliapi.com/i/pe/img979.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* fixed 在移动端行为可能不同，按需保留 */
+    background-attachment: fixed;
+    
+  }
+
+  /* 固定覆盖层（用于 backdrop-filter） */
+  #bg-overlay {
+    position: fixed;
+    inset: 0;                     /* top:0; right:0; bottom:0; left:0; */
+    pointer-events: none;         /* 不阻塞交互 */
+    z-index: 0;                   /* 在页面内容之下 */
+    transition: background 300ms ease, backdrop-filter 300ms ease;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  /* 默认（白昼）半透明浅遮罩 + 模糊 */
+  html:not([theme="dark"]) #bg-overlay {
+    background: rgba(255,255,255,0.45); /* 白天半透明，可调 */
+  }
+
+  /* 夜间模式下，使用深色遮罩 */
+  html[theme="dark"] #bg-overlay {
+    background: rgba(0,0,0,0.45);       /* 夜间半透明，可调 */
+  }
+
+  /* 如果没有设置背景图，隐藏 overlay（避免不必要的模糊） */
+  
+
+  /* 让主内容在 overlay 之上 */
+  #main-grid {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 可选：当使用侧边栏/其它组件时，确保它们 z-index 足够高 */
+  #nav, #sidebar-wrapper, #content-body, #footer-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 小屏/性能友好降级：当浏览器不支持 backdrop-filter 时，降低模糊或使用更强的遮罩色 */
+  @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    #bg-overlay {
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      /* 使用更明显的遮罩以保证可读性 */
+      html:not([theme="dark"]) #bg-overlay { background: rgba(255,255,255,0.75); }
+      html[theme="dark"] #bg-overlay { background: rgba(0,0,0,0.65); }
+    }
+  }
+</style>
+
+<body class="custom-bg">
+  <!-- overlay 必须放在 DOM 内，这里作为 body 的第一个元素 -->
+  <div id="bg-overlay" aria-hidden="true"></div>
+
   
    
   <div id="main-grid" class="  ">
@@ -326,5 +394,90 @@
 
   </div>
   <script src="/js/light-dark-switch.js"></script>
-</body>
-</html>
+  <script>
+  (function() {
+    const CONTAINER = document.getElementById('hitokoto-container');
+    const TEXT = document.getElementById('hitokoto-text');
+    const FROM = document.getElementById('hitokoto-from');
+    
+    // 错误处理
+    function showError() {
+      TEXT.innerText = '今日份灵感正在路上~';
+      FROM.innerText = '';
+    }
+    
+    // 渲染一言
+    function renderHitokoto(data) {
+      TEXT.innerText = data.hitokoto;
+      FROM.innerText = `—— ${data.from || '未知来源'}`;
+    }
+    
+    // 主逻辑
+    function initHitokoto() {
+      const now = Date.now();
+      const cacheKey = 'hitokoto_cache';
+      const cache = JSON.parse(localStorage.getItem(cacheKey) || '{}');
+      
+      // 显示缓存内容（如果有）
+      if (cache.data && cache.expire > now) {
+        renderHitokoto(cache.data);
+      }
+      
+      // 请求新数据（带随机延迟）
+      setTimeout(() => {
+        fetch('https://v1.hitokoto.cn?c=a&c=b&c=c', {
+          mode: 'cors',
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+          if (!response.ok) throw new Error('API error');
+          return response.json();
+        })
+        .then(data => {
+        /* 全局背景和毛玻璃 overlay（保持原样） */
+html, body { height: 100%; margin: 0; }
+html {
+  
+  background-image: url('https://img.loliapi.com/i/pe/img979.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+#bg-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  transition: background 300ms ease, backdrop-filter 300ms ease;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+html:not([theme="dark"]) #bg-overlay {
+  background: rgba(255,255,255,0.45);
+}
+html[theme="dark"] #bg-overlay {
+  background: rgba(0,0,0,0.45);
+}
+
+
+/* 文章容器半透明毛玻璃 */
+.article-inner {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  transition: background 0.3s ease;
+}
+html[theme="dark"] .article-inner {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* 确保主内容在 overlay 之上 */
+#main-grid,
+#nav, #sidebar-wrapper, #content-body, #footer-wrapper {
+  position: relative;
+  z-index: 1;
+}
+        
