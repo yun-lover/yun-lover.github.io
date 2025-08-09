@@ -24,8 +24,8 @@
 <meta property="og:title" content="Yun-love">
 <meta property="og:url" content="http://yun-lover.github.io/archives/2025/08/index.html">
 <meta property="og:site_name" content="Yun-love">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="Yun-love">
+<meta property="og:locale">
+<meta property="article:author" content="yun-love">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Yun-love" type="application/atom+xml">
@@ -153,7 +153,7 @@
       
         <a class="archive-link" href="/archives/2025/08 ">
           August 2025 
-          <div class="archive-count">1 </div>
+          <div class="archive-count">2 </div>
         </a>
       
     </div>
@@ -166,6 +166,12 @@
     <div class="widget">
       <h3 class="widget-title">Recent Posts</h3>
       <ul>
+        
+          <a class="recent-link" href="/2025/08/09/hello-world/" title="Hello World" >
+            <div class="recent-link-text">
+              Hello World
+            </div>
+          </a>
         
           <a class="recent-link" href="/2025/08/06/first/" title="LingChat-C++：一个由ai驱动的galgame" >
             <div class="recent-link-text">
@@ -201,8 +207,27 @@
             <div class="dot-wrapper">
                 <div class="dot"></div>
             </div>
-            <div class="article-count">1 article</div>
+            <div class="article-count">2 articles</div>
         </div>
+      
+      <a class="archive-article-link" href="/2025/08/09/hello-world/" title="Hello World">
+        <div class="date">08-09</div>
+        <div class="line">
+            <div class="dot"></div>
+        </div>
+        <div class="title">
+            <div class="title-inner">
+                
+                    Hello World
+                
+            </div>
+        </div>
+        <div class="tags">
+            
+        </div>
+      </a>
+    
+      
       
       <a class="archive-article-link" href="/2025/08/06/first/" title="LingChat-C++：一个由ai驱动的galgame">
         <div class="date">08-06</div>
@@ -259,62 +284,5 @@
 
   </div>
   <script src="/js/light-dark-switch.js"></script>
-<script>
-  (function() {
-    const CONTAINER = document.getElementById('hitokoto-container');
-    const TEXT = document.getElementById('hitokoto-text');
-    const FROM = document.getElementById('hitokoto-from');
-    
-    // 错误处理
-    function showError() {
-      TEXT.innerText = '今日份灵感正在路上~';
-      FROM.innerText = '';
-    }
-    
-    // 渲染一言
-    function renderHitokoto(data) {
-      TEXT.innerText = data.hitokoto;
-      FROM.innerText = `—— ${data.from || '未知来源'}`;
-    }
-    
-    // 主逻辑
-    function initHitokoto() {
-      const now = Date.now();
-      const cacheKey = 'hitokoto_cache';
-      const cache = JSON.parse(localStorage.getItem(cacheKey) || '{}');
-      
-      // 显示缓存内容（如果有）
-      if (cache.data && cache.expire > now) {
-        renderHitokoto(cache.data);
-      }
-      
-      // 请求新数据（带随机延迟）
-      setTimeout(() => {
-        fetch('https://v1.hitokoto.cn?c=a&c=b&c=c', {
-          mode: 'cors',
-          headers: { 'Accept': 'application/json' }
-        })
-        .then(response => {
-          if (!response.ok) throw new Error('API error');
-          return response.json();
-        })
-        .then(data => {
-          // 更新缓存（1小时有效）
-          localStorage.setItem(cacheKey, JSON.stringify({
-            data: data,
-            expire: now + 3600000
-          }));
-          renderHitokoto(data);
-        })
-        .catch(() => {
-          if (!cache.data) showError();
-        });
-      }, 1000 + Math.random() * 2000); // 1-3秒随机延迟
-    }
-    
-    // 初始化
-    if (CONTAINER) initHitokoto();
-  })();
-</script>
 </body>
 </html>

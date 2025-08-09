@@ -24,8 +24,8 @@
 <meta property="og:title" content="Yun-love">
 <meta property="og:url" content="http://yun-lover.github.io/index.html">
 <meta property="og:site_name" content="Yun-love">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="Yun-love">
+<meta property="og:locale">
+<meta property="article:author" content="yun-love">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Yun-love" type="application/atom+xml">
@@ -153,7 +153,7 @@
       
         <a class="archive-link" href="/archives/2025/08 ">
           August 2025 
-          <div class="archive-count">1 </div>
+          <div class="archive-count">2 </div>
         </a>
       
     </div>
@@ -166,6 +166,12 @@
     <div class="widget">
       <h3 class="widget-title">Recent Posts</h3>
       <ul>
+        
+          <a class="recent-link" href="/2025/08/09/hello-world/" title="Hello World" >
+            <div class="recent-link-text">
+              Hello World
+            </div>
+          </a>
         
           <a class="recent-link" href="/2025/08/06/first/" title="LingChat-C++：一个由ai驱动的galgame" >
             <div class="recent-link-text">
@@ -183,6 +189,89 @@
     </div>
     <div id="content-body">
       
+   
+
+
+<article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/09/hello-world/">Hello World</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-09T03:24:41.771Z" itemprop="datePublished">2025-08-09</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    Uncategorized 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            367 words 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server1$ hexo server
+
+More info: Server
+Generate static files1$ hexo generate
+
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+
+More info: Deployment
+
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/09/hello-world/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
    
 
 
@@ -270,6 +359,7 @@
 
 
 
+
     </div>
     <div id="footer-wrapper">
       <footer id="footer">
@@ -307,62 +397,5 @@
 
   </div>
   <script src="/js/light-dark-switch.js"></script>
-<script>
-  (function() {
-    const CONTAINER = document.getElementById('hitokoto-container');
-    const TEXT = document.getElementById('hitokoto-text');
-    const FROM = document.getElementById('hitokoto-from');
-    
-    // 错误处理
-    function showError() {
-      TEXT.innerText = '今日份灵感正在路上~';
-      FROM.innerText = '';
-    }
-    
-    // 渲染一言
-    function renderHitokoto(data) {
-      TEXT.innerText = data.hitokoto;
-      FROM.innerText = `—— ${data.from || '未知来源'}`;
-    }
-    
-    // 主逻辑
-    function initHitokoto() {
-      const now = Date.now();
-      const cacheKey = 'hitokoto_cache';
-      const cache = JSON.parse(localStorage.getItem(cacheKey) || '{}');
-      
-      // 显示缓存内容（如果有）
-      if (cache.data && cache.expire > now) {
-        renderHitokoto(cache.data);
-      }
-      
-      // 请求新数据（带随机延迟）
-      setTimeout(() => {
-        fetch('https://v1.hitokoto.cn?c=a&c=b&c=c', {
-          mode: 'cors',
-          headers: { 'Accept': 'application/json' }
-        })
-        .then(response => {
-          if (!response.ok) throw new Error('API error');
-          return response.json();
-        })
-        .then(data => {
-          // 更新缓存（1小时有效）
-          localStorage.setItem(cacheKey, JSON.stringify({
-            data: data,
-            expire: now + 3600000
-          }));
-          renderHitokoto(data);
-        })
-        .catch(() => {
-          if (!cache.data) showError();
-        });
-      }, 1000 + Math.random() * 2000); // 1-3秒随机延迟
-    }
-    
-    // 初始化
-    if (CONTAINER) initHitokoto();
-  })();
-</script>
 </body>
 </html>
