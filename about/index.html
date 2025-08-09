@@ -318,16 +318,62 @@
 
   </div>
   <script src="/js/light-dark-switch.js"></script>
-  <script>
-  fetch('https://v1.hitokoto.cn?c=d&c=h&c=j')  // c参数指定类型：d=小说, h=影视, j=网易云热评
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('hitokoto-text').innerText = data.hitokoto;
-      document.getElementById('hitokoto-from').innerText = `—— ${data.from || '未知来源'}`;
-    })
-    .catch(() => {
-      document.getElementById('hitokoto-text').innerText = '今日份灵感正在路上~';
-    });
+<script>
+  (function() {
+    const CONTAINER = document.getElementById('hitokoto-container');
+    const TEXT = document.getElementById('hitokoto-text');
+    const FROM = document.getElementById('hitokoto-from');
+    
+    // 错误处理
+    function showError() {
+      TEXT.innerText = '今日份灵感正在路上~';
+      FROM.innerText = '';
+    }
+    
+    // 渲染一言
+    function renderHitokoto(data) {
+      TEXT.innerText = data.hitokoto;
+      FROM.innerText = `—— ${data.from || '未知来源'}`;
+    }
+    
+    // 主逻辑
+    function initHitokoto() {
+      const now = Date.now();
+      const cacheKey = 'hitokoto_cache';
+      const cache = JSON.parse(localStorage.getItem(cacheKey) || '{}');
+      
+      // 显示缓存内容（如果有）
+      if (cache.data && cache.expire > now) {
+        renderHitokoto(cache.data);
+      }
+      
+      // 请求新数据（带随机延迟）
+      setTimeout(() => {
+        fetch('https://v1.hitokoto.cn?c=a&c=b&c=c', {
+          mode: 'cors',
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+          if (!response.ok) throw new Error('API error');
+          return response.json();
+        })
+        .then(data => {
+          // 更新缓存（1小时有效）
+          localStorage.setItem(cacheKey, JSON.stringify({
+            data: data,
+            expire: now + 3600000
+          }));
+          renderHitokoto(data);
+        })
+        .catch(() => {
+          if (!cache.data) showError();
+        });
+      }, 1000 + Math.random() * 2000); // 1-3秒随机延迟
+    }
+    
+    // 初始化
+    if (CONTAINER) initHitokoto();
+  })();
 </script>
 </body>
 </html>
